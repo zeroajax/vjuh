@@ -1,0 +1,34 @@
+*[class*='vj-down'] {
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: 0.7s;
+}
+
+*[class*='vj-up']{
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 0.7s;
+}
+
+*[class*='vj-right'] {
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: 0.7s;
+}
+
+*[class*='vj-left'] {
+  transform: translateX(100px);
+  opacity: 0;
+  transition: 0.7s;
+}
+
+*[class*='vj-growth'] {
+  transform: scale(0);
+  opacity: 0;
+  transition: 0.7s;
+}
+
+.vjuh {
+  transform: none;
+  opacity: 1;
+}

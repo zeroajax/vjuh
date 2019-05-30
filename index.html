@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="vjuh.css">
+  <script src="vjuh.js"></script>
+</head>
+<body>
+ <h1>Простенький скрипт vjuh для динамического показа эллементов которые попадают в область видимого окна</h1>
+ <h2>Для просмотра эффекта кликните мышкой на одном из эллементов расположенных ниже</h2>
+  <div class="container">
+    <div class="vjux">
+      <div class="vjux__item vjux__item_vj-down">
+        <div class="vjux__title">vj-down</div>
+        <img src="img/vjuh.png" alt="">
+      </div>
+      <div class="vjux__item vjux__item_vj-up">
+        <div class="vjux__title">vj-up</div>
+        <img src="img/vjuh.png" alt="">
+      </div>
+      <div class="vjux__item vjux__item_vj-right">
+        <div class="vjux__title">vj-right</div>
+        <img src="img/vjuh.png" alt="">
+      </div>
+      <div class="vjux__item vjux__item_vj-left">
+        <div class="vjux__title">vj-left</div>
+        <img src="img/vjuh.png" alt="">
+      </div>
+      <div class="vjux__item vjux__item_vj-growth">
+        <div class="vjux__title">vj-growth</div>
+        <img src="img/vjuh.png" alt="">
+      </div>
+    </div>
+    <p>1. Для добавление vjuh на свою страницу, скачиваем репозиторий себе. 
+    Копируем файлы vjuh.js и vjuh.js в свой проект.</p>
+    <p>2. Внедряем файлы в свою страницу указывая свои относительные пути к файлам.</p>
+    <p>3. Добавляем нужным эллементам нужные классы с анимациями. Вы можете назначать классы обычным
+    стилем class="vj-up" или как при методологии БЭМ блок__эллемент_vj-up. Скрипт найдет все варианты так как проверяет в строке классов наличие подстроки с названием анимации.</p>
+    <p>4. В своем скрипте вызываем vjuh({appearance:80}); . Число 80 означает процент, который указывает на каком уровне от размера экрана должна активироватся анимация. 10 будет означать что анимация запустится когда эллемент будет практически вверху экрана, 50 на его середине, 90 почти в самом низу.</p>
+    <p>5. Так как ваш скрипт будет запускать vjuh который будет оперировать классами DOM, вам нужно будет или указать ваш скрипт с коммандой vjuh({appearance:80}); или в самом конфе документа перед закрывающим тегом body, или в любом удобном для вас месте поставив событие на проверку DOMContentLoaded которая укажет что DOM загрузился и можно запускать скрипт.</p>
+  </div>
+ 
+  <script>
+    vjuh({appearance : 80});
+  </script>
+  <script>
+    document.addEventListener("click", function(e){
+      if(e.target.parentElement.classList.contains("vjux__item")){
+        e.target.parentElement.classList.remove('vjuh')
+        
+        setTimeout(function (){
+          e.target.parentElement.classList.add('vjuh')
+        }, 700)
+      };
+    });
+  </script>
+</body>
+</html>

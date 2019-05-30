@@ -1,0 +1,38 @@
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center
+}
+
+h2 {
+  text-align: center
+}
+
+img{
+  display: block;
+  width: 100%;
+}
+
+.vjux {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.vjux__item {
+margin-top:20px;
+  width: 200px;
+}
+
+.vjux__title {
+  text-align: center;
+}
+p {
+  font-size: 18px;
+}
