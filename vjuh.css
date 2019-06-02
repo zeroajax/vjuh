@@ -2,6 +2,7 @@
   transform: translateY(-100px);
   opacity: 0;
   transition: 0.7s;
+
 }
 
 *[class*='vj-up']{
